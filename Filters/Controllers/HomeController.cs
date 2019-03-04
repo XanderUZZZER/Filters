@@ -8,9 +8,11 @@ using Filters.Infrastructure;
 namespace Filters.Controllers
 {
     //[HttpsOnly]
-    [Profile]
-    [ViewResultDetails]
-    [RangeException]
+    //[Profile]
+    //[ViewResultDetails]
+    //[RangeException]
+    [TypeFilter(typeof(DiagnosticsFilter))]
+    [TypeFilter(typeof(TimeFilter))]
     public class HomeController : Controller
     {
         //[RequireHttps]
